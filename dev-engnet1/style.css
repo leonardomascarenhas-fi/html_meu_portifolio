@@ -1,0 +1,67 @@
+h3{
+    text-align: center!important;
+}
+.texto-rosaEngnet{
+    color: #a031db;
+}
+/* Configurando um local para colocar as imagens de fundo*/
+.bgimg-1, .bgimg-2{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Imagem Logo */
+.bgimg-1{
+    background-image: url("img/Logo_semfundo.jpg");
+    height: 400px;
+    background-size: contain;
+    position: relative;
+    opacity: 0.75;
+}
+/* padding do logo*/
+.box-logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+/* auto do logo*/
+.logo-conteudo{
+    letter-spacing: 10px;
+    color: #fff!important;
+    background-color: #000000!important;
+    padding: 12px 24px!important;
+    text-align: center!important;
+    font-size: 24px!important;
+    animation: opac 0.8s;
+}
+/* SOBRE MIM */
+/* padding do sobre mim*/
+.padding-sobremim{
+    padding-top: 64px!important;
+    padding-bottom: 64px!important;
+    padding: 0.01em 16px;
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Espaço para meu nome e foto*/
+.padding-meunome{
+    padding: 12px 24px!important;
+    text-align: center!important;
+    float: left;
+    width: 100%;
+    display: block;
+}
+.box-meunome{
+    border-radius: 0.60;
+    border-radius: 4px;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-style: none;
+    box-sizing: inherit;
+    width: 200px;
+    text-align: center!important;
+}
