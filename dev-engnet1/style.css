@@ -1,26 +1,60 @@
+/*Mudando a fonte das letras pra Identidade Visual
+    do Notion*/ 
+h1{
+    font-family: Montserrat;
+}
 h3{
     text-align: center!important;
+    font-family: Montserrat;
+}
+p{
+    font-family: Montserrat;
+    text-align: center;
+}
+span{
+    font-family: Montserrat;
+}
+div{
+    display: block;
+}
+img{
+    border-style: none;
+    vertical-align: middle;
 }
 .texto-rosaEngnet{
     color: #a031db;
 }
 /* Configurando um local para colocar as imagens de fundo*/
 .bgimg-1, .bgimg-2{
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-/* Imagem Logo */
+/* 1º imagem de fundo (ENGNET)*/
 .bgimg-1{
     background-image: url("img/Logo_semfundo.jpg");
+    height: 450px;
+    background-size: contain;
+    position: relative;
+    opacity: 0.75;
+}
+/* 2ª imagem de fundo(portfolio)*/
+.bgimg-2{
+    background-image: url("https://thumbs.dreamstime.com/b/black-white-photo-top-view-workspace-laptop-wooden-table-cup-coffee-notebook-182804297.jpg");
     height: 400px;
     background-size: contain;
     position: relative;
     opacity: 0.75;
 }
-/* padding do logo*/
-.box-logo{
+/* Espaço para colocar o texto Logo centrado a imagem */
+.box-logo-1{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.box-logo-2{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -39,29 +73,58 @@ h3{
 /* SOBRE MIM */
 /* padding do sobre mim*/
 .padding-sobremim{
-    padding-top: 64px!important;
-    padding-bottom: 64px!important;
+    padding-top: 16px!important;
     padding: 0.01em 16px;
     max-width: 980px;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
 /* Espaço para meu nome e foto*/
 .padding-meunome{
-    padding: 12px 24px!important;
+    padding-top: 16px!important;
+    padding-bottom: 16px!important;
+    padding: 0.01em 16px!important;
     text-align: center!important;
-    float: left;
-    width: 100%;
     display: block;
+    box-sizing: inherit;
 }
+/* Box com meu nome escrito*/
 .box-meunome{
-    border-radius: 0.60;
     border-radius: 4px;
-    max-width: 100%;
+    max-width: 200px;
     height: auto;
     vertical-align: middle;
     border-style: none;
     box-sizing: inherit;
     width: 200px;
     text-align: center!important;
+}
+/* Padding para o título meu trabalho*/
+.padding-meutrabalho{
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding: 0.01em 16px;
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Usando um grid para adicionar 2 div na mesma linha*/
+.container-trabalhos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+/* Padding de cada div: Um para imagem e outro para texto.*/
+.padding-trabalhos{
+    width: 70%;
+    padding: 12px 24px;
+    float: left;
+    margin-right: auto;
+    margin-left: auto;
+}
+/* Padding da imagem (dashboard e aluraCS*/
+.padding-imagem{
+    border-radius: 4px;
+    max-width: 100%;
+    height: auto;
 }
