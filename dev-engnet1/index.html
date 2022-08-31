@@ -1,30 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
+        <!-- -->
+        <!-- Imagem do portfolio -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+        <!-- Configurações Básicas -->
         <title>Meu Portfolio</title>
         <meta charset="UTF-8">
         <meta>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="bgimg-1" id="home">
-            <div class="box-logo" href="style.css">
-                <span class="logo-conteudo" href="style.css">Bem Vindos!</span>
+        <!-- Box com mensagem bem vindo. Além da imagem de fundo 1(Engnet) -->
+        <div class="bgimg-1" href='style.css'>
+            <div class="box-logo-1" href="style.css">
+                <p class="logo-conteudo" href="style.css">Bem Vindo!</p>
+                <br>
             </div>
         </div>
+        <!-- Div com minha descrição -->
         <div class="padding-sobremim" href='style.css'>
+            <button onclick="seuNome()" type="button" id="seu-nome"> Qual seu nome?</button>
             <h3>SOBRE MIM</h3>
-            <p>Olá! sou o Leo e faço parte do squad de Trainee Aplicados da <span class="texto-rosaEngnet" href='style.css'>EngNet</span>. Recentemente entrei na empresa Junior pois estava sentindo falta de uma experiência profissional e empreendedora! Atualmente penso em entrar no time de projetos pra ter um aprendizado de linguagens novas de programação e em segunda opção Marketing (mas confesso que depois da apresentação do Back Office gostei bastante de GG).
+            <p>Olá <span id="nome">!</span>! Sou o Leo e faço parte do squad de Trainee Aplicados da <span class="texto-rosaEngnet" href='style.css'>EngNet</span>. Recentemente entrei na empresa Junior pois estava sentindo falta de uma experiência profissional e empreendedora! Atualmente penso em entrar no time de projetos pra ter um aprendizado de linguagens novas de programação e em segunda opção Marketing (mas confesso que depois da apresentação do Back Office gostei bastante de GG).
             Gosto muito de sair pra role com meus amigos e descobrir fofoca de gente que nem sei a cara.</p>
         </div>
-        <div class="padding-meunome" hfref="style.css">
-            <p>
-                <h1>Leonardo Filho</h1>
-            </p>
-            <br>
-            <img src="img/Minha_Foto.jpg" class="box-meunome">
-            <br>
+        <!-- Meu nome e minha foto -->
+        <div class="padding-meunome" href="style.css">
+            <h1>Leonardo Filho</h1>   
+            <img src="img/Minha_Foto.jpg" class="box-meunome"></img>
+            <h1></h1>
         </div>
+        <!-- Seção meu portfólio com imagem de fundo e box -->
+        <div class="bgimg-2" href="style.css">
+            <div class="box-logo-2" href='style.css'>
+                <span class="logo-conteudo" href='style.css'>Portfólio</span>
+            </div>
         </div>
+        <!-- Div de apresentação dos meus trabalhos -->
+        <div class="padding-meutrabalho" href='style.css'>
+            <h3>Meus Trabalho</h3>
+            <p>Alguns dos meus trabalhos abaixo.</p>
+        </div>
+        <!-- Div com imagem e descrição do meu trabalho -->
+        <div class="container-trabalhos" href="style.css">
+            <div class="padding-trabalhos" href='style.css'>
+                <p>Cursos Alura Categorizados</p>
+                <br>
+                <img src="img/AluraCS.png" class="padding-imagem" width="600" height="300">
+            </div>
+            <div class="padding-trabalhos" href='style.css'>
+                <br>
+                <p style="text-align: left;">Precisava de uma tabela que tivesse todos os cursos da alura definidos em Categorias e Subcategorias. Quando pesquisei sobre a API de cursos da alura percebi que não havia essa divisão. Portanto decidi realizar um web scrapping para gerar essa tabela.</p>
+                <br>
+            </div>
+        </div>
+        <!-- Div com imagem e descrição do meu trabalho -->
+        <div class="container-trabalhos" href="style.css">
+            <div class="padding-trabalhos" href='style.css'>
+                <p>Power BI: Dev em T</p>
+                <br>
+                <img src="img/Dashboard.png" class="padding-imagem" width="600" height="300">
+            </div>
+            <div class="padding-trabalhos" href='style.css'>
+                <br>
+                <p style="text-align: left;">Projeto realizado para saber quão Dev em T o aluno pode ser terminando tais cursos. Utilizei tanto os dados categorizados do meu outro trabalho quanto os da própia API do site.</p>
+                <br>
+            </div>
+        </div>
+                <!-- Script com a função de colocar o nome do leitor no texto. -->
+        <script>
+            var spanNome = document.querySelector("span")
+            //Trocar nome com o que for digitado no prompt
+            let seuNome = document.getElementById("seu-nome");
+            //Funcao que o botao "Trocar nome para o que eu quiser!" irá executar
+            seuNome.onclick = function () {
+                let nome = prompt("Qual é o seu nome?");
+                //Checagem para ver se algo foi digitado
+                if (nome == "") 
+                    alert("Nome Inválido!");
+                else 
+                    spanNome.innerText = nome;
+            };
+        </script>
     </body>
 </html>
